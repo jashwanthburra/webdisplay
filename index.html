@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-SUMMIT Links</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #000428, #004e92);
+            color: #fff;
+            overflow: hidden;
+            position: relative;
+            padding: 20px;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 90%;
+            width: 350px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+            position: relative;
+            z-index: 2;
+        }
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px #00cec9;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        h1 {
+            color: #f1c40f;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        a {
+            display: block;
+            margin: 10px 0;
+            font-size: 16px;
+            color: #00cec9;
+            text-decoration: none;
+            font-weight: 700;
+            padding: 8px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        a:hover {
+            color: #fff;
+            background: #00cec9;
+            text-decoration: none;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #00cec9;
+        }
+        p {
+            font-size: 14px;
+            margin: 10px 0;
+            font-weight: 500;
+        }
+        .floating-particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .particle {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            animation: float 10s infinite ease-in-out;
+        }
+        @keyframes float {
+            from { transform: translateY(0) rotate(0deg); opacity: 1; }
+            to { transform: translateY(-100vh) rotate(720deg); opacity: 0; }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                width: 90%;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            a {
+                font-size: 14px;
+                padding: 6px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles" id="floating-particles"></div>
+    <div class="container">
+        <h1>🚀 Welcome to the Ultimate E-SUMMIT Experience 🚀</h1>
+        <p><strong>Website:</strong> <a href="https://www.esummit.org.in/" target="_blank">Visit E-SUMMIT</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/sumvn_4" target="_blank">Follow @sumvn_4</a></p>
+        <p><strong>Guest Handbook:</strong> <a href="https://pdf.ac/2dzL9n" target="_blank">Download Handbook</a></p>
+        <p><strong>VIBA Instagram:</strong> <a href="https://www.instagram.com/___viba__?igsh=MXZ4dDZuYjR0NzI0eQ==" target="_blank">Follow VIBA</a></p>
+        <p><strong>VIBA Linkdin:</strong> <a href="https://www.linkedin.com/company/viba-vaagdevi-incubation-and-business-accelerator/" target="_blank">Connect through VIBA</a></p>
+    </div>
+    <script>
+        function createFloatingParticles() {
+            const container = document.getElementById('floating-particles');
+            for (let i = 0; i < 20; i++) {
+                let particle = document.createElement('div');
+                particle.classList.add('particle');
+                let size = Math.random() * 8 + 3;
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDuration = `${Math.random() * 5 + 5}s`;
+                container.appendChild(particle);
+            }
+        }
+        createFloatingParticles();
+    </script>
+</body>
+</html>
